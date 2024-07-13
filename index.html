@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +7,67 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo"><img src="img/logo blog.png" alt=""></div>
+        <div class="auth-links">
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Criar Conta</button>
+        </div>
+    </header>
     <div class="container">
-        <h1>Blog Simples</h1>
+        <h1>Fala aê</h1>
         
-        <div id="postList">
-            <!-- Lista de postagens existentes -->
+        <div id="post-list">
         </div>
-
-        <div id="postDetails" class="hidden">
-            <!-- Detalhes da postagem -->
-            <h2 id="postTitle"></h2>
-            <p id="postDate"></p>
-            <p id="postContent"></p>
-            <div id="commentsSection">
-                <h3>Comentários</h3>
-                <ul id="commentsList"></ul>
-                <textarea id="commentInput" placeholder="Adicione um comentário"></textarea>
-                <button id="addCommentBtn">Adicionar Comentário</button>
-            </div>
-            <button id="backBtn">Voltar</button>
-        </div>
-
-        <div id="addPostSection">
-            <h2>Adicionar Nova Postagem</h2>
-            <input type="text" id="newPostTitle" placeholder="Título">
-            <textarea id="newPostContent" placeholder="Conteúdo"></textarea>
-            <input type="date" id="newPostDate">
-            <button id="addPostBtn">Adicionar Postagem</button>
+        
+        <h2>Adicionar Nova Postagem</h2>
+        <form id="new-post-form">
+            <input type="text" id="title" placeholder="Título" required>
+            <textarea id="content" placeholder="Conteúdo" required></textarea>
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+    
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
         </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-signup-btn">&times;</span>
+            <h2>Criar Conta</h2>
+            <form id="signup-form">
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="post-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-details-btn">&times;</span>
+            <h2 id="details-title"></h2>
+            <p id="details-date"></p>
+            <p id="details-content"></p>
+            <h3>Comentários</h3>
+            <div id="comments-list">
+            </div>
+            <form id="new-comment-form">
+                <textarea id="comment" placeholder="Deixe um comentário" required></textarea>
+                <button type="submit">Comentar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
