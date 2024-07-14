@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <div class="logo"><img src="img/logo blog.png" alt=""></div>
+        <div class="logo"><img src="img/logo blog.png" alt="Logo do Blog"></div>
         <div class="auth-links">
             <button id="login-btn">Login</button>
             <button id="signup-btn">Criar Conta</button>
@@ -18,12 +18,14 @@
         <h1>Fala aê</h1>
         
         <div id="post-list">
+
         </div>
         
         <h2>Adicionar Nova Postagem</h2>
         <form id="new-post-form">
             <input type="text" id="title" placeholder="Título" required>
             <textarea id="content" placeholder="Conteúdo" required></textarea>
+            <input type="file" id="image" accept="image/*">
             <button type="submit">Adicionar</button>
         </form>
     </div>
@@ -57,9 +59,11 @@
             <span class="close-details-btn">&times;</span>
             <h2 id="details-title"></h2>
             <p id="details-date"></p>
+            <img id="details-image" src="" alt="Imagem da postagem" style="max-width: 100%; display: none;">
             <p id="details-content"></p>
             <h3>Comentários</h3>
             <div id="comments-list">
+
             </div>
             <form id="new-comment-form">
                 <textarea id="comment" placeholder="Deixe um comentário" required></textarea>
